@@ -1,7 +1,8 @@
 import React from "react";
+import "./Header.css";
 
 function Header() {
-  return <div>hello world</div>;
+  return <div></div>;
 }
 
 export default Header;
