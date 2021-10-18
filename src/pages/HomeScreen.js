@@ -1,8 +1,13 @@
 import React from "react";
+import Categories from "../components/Categories";
 import "./HomeScreen.css";
 
 function HomeScreen() {
-  return <div>this is the homescreen</div>;
+  return (
+    <div>
+      <Categories />
+    </div>
+  );
 }
 
 export default HomeScreen;
