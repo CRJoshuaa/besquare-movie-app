@@ -14,7 +14,9 @@
 
 .category-buttons {
   display: flex;
+  margin-top: 10px;
   height: 40px;
+  width: 100%;
 }
 
 .category-buttons > button {
@@ -22,6 +24,8 @@
   background-color: rgb(85, 85, 85);
   border: none;
   border-radius: 0.6rem;
+  margin-left: 10px;
+  width: 100px;
 }
 .category-panels {
   display: flex;

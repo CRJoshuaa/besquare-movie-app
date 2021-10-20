@@ -8,7 +8,6 @@ import "../App.css";
 function HomeScreen() {
   return (
     <div>
-      <Categories />
       <Header />
       <FeatureMovie />
       <Categories />
