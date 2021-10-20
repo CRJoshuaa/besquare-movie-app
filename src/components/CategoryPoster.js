@@ -1,8 +1,10 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 import "./CategoryPoster.css";
 
 function CategoryPoster(props) {
   const base_URL = "https://image.tmdb.org/t/p/original/";
+
   return (
     <img
       className="poster"

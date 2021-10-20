@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./FeatureMovie.css";
-import "../App.css";
 
 function FeatureMovie() {
   const [movie, setMovie] = useState([]);
@@ -53,9 +52,7 @@ function FeatureMovie() {
 
   return (
     <div className="wrapper">
-      <div className="wrapper-header">
-        <h1 className="header">Featured today</h1>
-      </div>
+      <h1 className="header">Featured today</h1>
       <div
         className="poster"
         style={{
@@ -80,8 +77,8 @@ function FeatureMovie() {
         </div>
 
         <div className="wrapper-button">
-          <button className="basic-btn">More Info</button>
-          <button className="basic-btn" onClick={playTrailer}>
+          <button className="more-info">More Info</button>
+          <button className="view-trailer" onClick={playTrailer}>
             View Trailer
           </button>
         </div>
