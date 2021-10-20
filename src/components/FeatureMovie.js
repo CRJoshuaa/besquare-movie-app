@@ -53,28 +53,26 @@ function FeatureMovie() {
 
   return (
     <div className="feature-wrapper">
-      <div className="feature-wrapper-header">
-        <h1 className="header">Featured today</h1>
-      </div>
+      <h1 className="header">Featured today</h1>
       <div
         className="feature-poster"
         style={{
-          backgroundImage: `url(https://image.tmdb.org/t/p/w780/${
-            movie.backdrop_path ? movie.backdrop_path : ""
+          backgroundImage: ` linear-gradient(to bottom, transparent 0%, black 100%),url(https://image.tmdb.org/t/p/w1280/${
+            movie?.backdrop_path || ""
           })`,
         }}
       >
         <div className="feature-wrapper-info">
-          <h1 className="feature-wrapper-header">{movie.title}</h1>
+          <h1 className="feature-wrapper-header">{movie?.title}</h1>
           <div className="feature-wrapper-details">
             <span className="feature-movie-details" id="genre">
-              {movie.genre_ids}
+              {movie?.genre_ids}
             </span>
             <span className="feature-movie-details" id="date">
-              {formatDate(movie.release_date)}
+              {formatDate(movie?.release_date)}
             </span>
             <span className="feature-movie-details" id="score">
-              {movie.vote_average}/10
+              {movie?.vote_average}/10
             </span>
           </div>
 

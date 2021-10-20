@@ -7,7 +7,7 @@ function CategoryPoster(props) {
     <img
       className="category-poster"
       src={`${base_URL}${
-        props.movieObj.poster_path
+        props.movieObj.poster_path || props.movieObj.backdrop_path
           ? props.movieObj.poster_path
           : props.movieObj.backdrop_path
       }`}

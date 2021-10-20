@@ -1,4 +1,4 @@
-/* poster-dimensions:[height:439px, width:780px] */
+/* poster-dimensions:[height:720px, width:1280px] */
 
 .feature-wrapper {
   margin: 15px 0;
@@ -7,9 +7,10 @@
 }
 
 .feature-poster {
-  width: 780px;
-  height: 439px;
+  width: 1280px;
+  height: 720px;
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   border-radius: 25px;
   /* opacity: 65%; */
@@ -17,6 +18,7 @@
 }
 
 .feature-wrapper-info {
+  padding-left: 35px;
   letter-spacing: 1px;
   line-height: 1.5;
   color: #fff;
@@ -29,11 +31,12 @@
 .feature-wrapper-header {
   width: 55%;
   line-height: normal;
-  font-size: 2.3rem;
+  font-size: 2.5rem;
 }
 
 .feature-wrapper-details {
   margin: 10px 0px;
+  font-weight: bold;
 }
 
 .feature-movie-details {
@@ -43,4 +46,5 @@
 }
 
 .feature-wrapper-button {
+  padding-bottom: 45px;
 }
