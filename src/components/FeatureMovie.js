@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./FeatureMovie.css";
+import "../App.css";
 
 function FeatureMovie() {
   const [movie, setMovie] = useState([]);
@@ -51,36 +52,36 @@ function FeatureMovie() {
   };
 
   return (
-    <div className="wrapper">
+    <div className="feature-wrapper">
       <h1 className="header">Featured today</h1>
       <div
-        className="poster"
+        className="feature-poster"
         style={{
-          backgroundImage: `url(https://image.tmdb.org/t/p/w780/${movie.backdrop_path})`,
+          backgroundImage: ` linear-gradient(to bottom, transparent 0%, black 100%),url(https://image.tmdb.org/t/p/w1280/${
+            movie?.backdrop_path || ""
+          })`,
         }}
-      ></div>
-      <div className="wrapper-info">
-        <h1
-          style={{
-            width: "55%",
-            lineHeight: "normal",
-            height: "100%",
-            fontSize: "2.3rem",
-          }}
-        >
-          {movie.title}
-        </h1>
-        <div style={{ margin: "15px 0px" }}>
-          <span id="genre">{movie.genre_ids}</span>
-          <span id="date">{formatDate(movie.release_date)}</span>
-          <span id="score">{movie.vote_average}/10</span>
-        </div>
+      >
+        <div className="feature-wrapper-info">
+          <h1 className="feature-wrapper-header">{movie?.title}</h1>
+          <div className="feature-wrapper-details">
+            <span className="feature-movie-details" id="genre">
+              {movie?.genre_ids}
+            </span>
+            <span className="feature-movie-details" id="date">
+              {formatDate(movie?.release_date)}
+            </span>
+            <span className="feature-movie-details" id="score">
+              {movie?.vote_average}/10
+            </span>
+          </div>
 
-        <div className="wrapper-button">
-          <button className="more-info">More Info</button>
-          <button className="view-trailer" onClick={playTrailer}>
-            View Trailer
-          </button>
+          <div className="feature-wrapper-button">
+            <button className="basic-btn">More Info</button>
+            <button className="basic-btn" onClick={playTrailer}>
+              View Trailer
+            </button>
+          </div>
         </div>
       </div>
     </div>
