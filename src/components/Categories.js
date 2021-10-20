@@ -5,7 +5,6 @@ import requests from "../Request";
 import CategoryPoster from "./CategoryPoster";
 
 function Categories() {
-  const base_URL = "https://image.tmdb.org/t/p/original/";
   const [category, setCategory] = useState("action");
   const [movies, setMovies] = useState([]);
 
@@ -78,9 +77,7 @@ function Categories() {
       </div>
       <div className="category-panels">
         {movies.map((movie) => {
-          if (!movie.adult) {
-            return <CategoryPoster key={movie.id} movieObj={movie} />;
-          }
+          return <CategoryPoster key={movie.id} movieObj={movie} />;
         })}
       </div>
     </div>
