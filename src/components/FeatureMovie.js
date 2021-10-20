@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./FeatureMovie.css";
+import { Link } from "react-router-dom";
 
 function FeatureMovie() {
   const [movie, setMovie] = useState([]);
