@@ -1,33 +1,46 @@
-span {
-  color: #f1f2f6;
-  margin-right: 15px;
-  font-weight: bolder;
-}
-
 /* poster-dimensions:[height:439px, width:780px] */
 
-.wrapper {
+.feature-wrapper {
   margin: 15px 0;
   width: 100%;
   height: auto;
 }
 
-.poster {
+.feature-poster {
   width: 780px;
   height: 439px;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 25px;
-  opacity: 65%;
+  /* opacity: 65%; */
   box-shadow: 20px 20px 26px #080808, -20px -20px 26px #0e0e0e;
 }
 
-.wrapper-info {
-  position: relative;
-  bottom: 225px;
-  padding: 25px;
+.feature-wrapper-info {
   letter-spacing: 1px;
   line-height: 1.5;
   color: #fff;
-  height: 75px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.feature-wrapper-header {
+  width: 55%;
+  line-height: normal;
+  font-size: 2.3rem;
+}
+
+.feature-wrapper-details {
+  margin: 10px 0px;
+}
+
+.feature-movie-details {
+  color: #f1f2f6;
+  margin-right: 15px;
+  font-weight: bolder;
+}
+
+.feature-wrapper-button {
 }
