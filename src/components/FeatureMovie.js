@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { genres } from "../Genre";
 import "./FeatureMovie.css";
-import "../App.css";
 
 function FeatureMovie() {
   const [movie, setMovie] = useState([]);
