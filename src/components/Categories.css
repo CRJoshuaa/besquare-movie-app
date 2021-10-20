@@ -14,21 +14,20 @@
 
 .category-buttons {
   display: flex;
-  height: 20px;
-  padding: 10px;
+  height: 40px;
 }
 
 .category-buttons > button {
   color: white;
   background-color: rgb(85, 85, 85);
   border: none;
-  margin-left: 10px;
+
   border-radius: 0.6rem;
 }
 .category-panels {
   display: flex;
   overflow-x: scroll;
-  margin-top: 10px;
+  margin-top: 20px;
   height: 300px;
 }
 .category-panels::-webkit-scrollbar {

@@ -7,9 +7,9 @@ import "./HomeScreen.css";
 function HomeScreen() {
   return (
     <div>
-      <Categories />
       <Header />
       <FeatureMovie />
+      <Categories />
     </div>
   );
 }
