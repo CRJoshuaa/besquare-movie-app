@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import "./Categories.css";
 import axios from "../axios";
 import requests from "../Request";
 import CategoryPoster from "./CategoryPoster";
+import "./Categories.css";
+import "../App.css";
 
 function Categories() {
   const [category, setCategory] = useState("action");
@@ -30,11 +31,12 @@ function Categories() {
 
   return (
     <div className="categories">
-      <div className="category-title">
-        <h3>Browse Categories</h3>
+      <div>
+        <h1 className="header">Browse Categories</h1>
       </div>
       <div className="category-buttons">
         <button
+          className="basic-btn"
           id="action"
           onClick={() => {
             setCategory("action");
@@ -43,6 +45,7 @@ function Categories() {
           Action
         </button>
         <button
+          className="basic-btn"
           id="comedy"
           onClick={() => {
             setCategory("comedy");
@@ -51,6 +54,7 @@ function Categories() {
           Comedy
         </button>
         <button
+          className="basic-btn"
           id="horror"
           onClick={() => {
             setCategory("horror");
@@ -59,6 +63,7 @@ function Categories() {
           Horror
         </button>
         <button
+          className="basic-btn"
           id="romance"
           onClick={() => {
             setCategory("romance");
@@ -67,6 +72,7 @@ function Categories() {
           Romance
         </button>
         <button
+          className="basic-btn"
           id="documentary"
           onClick={() => {
             setCategory("documentary");

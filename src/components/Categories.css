@@ -1,36 +1,17 @@
 .categories {
   display: flex;
   flex-direction: column;
-  background-color: black;
-  height: 350px;
-}
-
-.category-title > h3 {
-  margin-left: 10px;
-  color: white;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  height: 100%;
 }
 
 .category-buttons {
   display: flex;
-  margin-top: 10px;
-  height: 40px;
-  width: 100%;
+  padding-bottom: 30px;
 }
 
-.category-buttons > button {
-  color: white;
-  background-color: rgb(85, 85, 85);
-  border: none;
-  border-radius: 0.6rem;
-  margin-left: 10px;
-  width: 100px;
-}
 .category-panels {
   display: flex;
   overflow-x: scroll;
-  margin-top: 20px;
   height: 300px;
 }
 .category-panels::-webkit-scrollbar {
