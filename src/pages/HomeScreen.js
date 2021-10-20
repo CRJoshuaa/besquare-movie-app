@@ -13,7 +13,7 @@ function HomeScreen() {
       <FeatureMovie />
 
       <Categories />
-      <Footer title="@#$%" />
+      <Footer title="Hello World" />
     </div>
   );
 }
