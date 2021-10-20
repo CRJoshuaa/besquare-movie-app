@@ -4,7 +4,6 @@ import FeatureMovie from "../components/FeatureMovie";
 import Header from "../components/Header";
 import "./HomeScreen.css";
 import "../App.css";
-import Categories from "../components/Categories";
 import MoviePage from "./MoviePage";
 
 function HomeScreen() {
@@ -13,7 +12,6 @@ function HomeScreen() {
       <Header />
       <FeatureMovie />
       <Categories />
-      <MoviePage />
     </div>
   );
 }
