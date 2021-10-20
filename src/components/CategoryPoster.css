@@ -1,4 +1,4 @@
-.poster {
+.category-poster {
   height: 200px;
   object-fit: contain;
   margin: 10px;
@@ -8,6 +8,6 @@
   transition: transform 450ms;
 }
 
-.poster:hover {
+.category-poster:hover {
   transform: scale(1.1);
 }
