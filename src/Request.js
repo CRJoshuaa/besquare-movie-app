@@ -14,4 +14,6 @@ const requests = {
 export default requests;
 /*
 https://api.themoviedb.org/3/discover/tv?api_key=a3827e96de599b6142d695f536ca566d&with_networks=213
+"https://image.tmdb.org/t/p/original/vFMvVG4KyMGwxOi9EB9JeIkLdvj.jpg"
+
 */
