@@ -60,8 +60,8 @@ function Footer(props) {
           quo voluptatem iste aut maiores libero qui nihil distinctio ut velit
           ducimus. Qui cumque voluptatem sit nesciunt vero et debitis dolor ut
           praesentium repellendus et ipsa repudiandae */}
-          We love films and storytelling as people.Its just a human compulsion
-          to listen to and tell stories.
+          "We love films and storytelling as people.Its just a human compulsion
+          to listen to and tell stories."
           <br />
           -Stanley Kubrick
         </p>
