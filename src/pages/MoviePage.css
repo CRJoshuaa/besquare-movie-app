@@ -1,24 +1,66 @@
-.backdrop {
+/* .backdrop {
   width: 530px;
   height: 530px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 25px;
-  /* opacity: 65%; */
   box-shadow: 20px 20px 26px #080808, -20px -20px 26px #0e0e0e;
   margin-top: 150px;
   left: 4rem;
   position: relative;
+} */
+
+.mp-wrapper {
+  display: grid;
+  grid-template-columns: minmax(10em, 25%) 1fr;
 }
 
-.title {
-  color: whitesmoke;
-  font-family: serif;
+.mp-poster {
+  width: 12em;
+  height: auto;
+  border: 2px solid #fff;
+}
+
+.mp-wrapper-poster,
+.mp-wrapper-info {
+  padding: 2em;
+  margin-top: 10em;
+}
+
+.mp-movie-detail {
+  margin-right: 1em;
+}
+
+.mp-wrapper-genre {
+  margin: 0.5em 0;
+}
+
+#mp-genre {
+  margin-right: 1em;
+  font-size: 1.2em;
+}
+
+.mp-wrapper-detail {
+  margin: 0.5em 0em;
+}
+
+.mp-overview {
+  line-height: 1.8em;
+}
+
+.mp-wrapper-btn {
+  margin: 2em 0em;
+}
+
+.mp-wrapper-description {
+  font-size: 1em;
+}
+
+/* .title {
   position: relative;
   left: 40rem;
   margin-top: -530px;
-  font-size: 50px;
 }
 
 .overview {
@@ -61,16 +103,4 @@
   left: 70rem;
   position: relative;
   margin-top: -39px;
-}
-
-.basic-btn1 {
-  left: 40rem;
-  position: relative;
-  font-size: 1.2rem;
-  margin-top: 2.5rem;
-  margin-right: 15px;
-  padding: 10px 20px;
-  border: 2px solid #fff;
-  border-radius: 25px;
-  background-color: #000;
-}
+} */
