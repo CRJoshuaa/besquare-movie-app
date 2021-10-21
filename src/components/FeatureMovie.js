@@ -45,7 +45,6 @@ function FeatureMovie() {
 
   return (
     <div className="feature-wrapper">
-      {/* <h1 className="header">Featured today</h1> */}
       <div
         className="feature-poster"
         style={{
