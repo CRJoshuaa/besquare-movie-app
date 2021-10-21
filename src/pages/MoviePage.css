@@ -8,28 +8,29 @@
   /* opacity: 65%; */
   box-shadow: 20px 20px 26px #080808, -20px -20px 26px #0e0e0e;
   margin-top: 150px;
-  margin-left: -200px;
+  left: 4rem;
+  position: relative;
 }
 
 .title {
   color: whitesmoke;
   font-family: serif;
   position: relative;
-  left: 400px;
+  left: 40rem;
   margin-top: -530px;
   font-size: 50px;
 }
 
 .overview {
   position: relative;
-  left: 400px;
+  left: 40rem;
   margin-top: 40px;
-  width: 70%;
+  width: 50%;
   font-family: Lucida Handwriting;
 }
 
 .vote_average {
-  left: 400px;
+  left: 40rem;
   position: relative;
   margin-top: 25px;
   border-radius: 50%;
@@ -45,7 +46,31 @@
 }
 
 .user_score {
-  left: 480px;
+  left: 45rem;
   position: relative;
-  margin-top: -45px;
+  margin-top: -47px;
+}
+
+.release_date {
+  left: 60rem;
+  position: relative;
+  margin-top: -37px;
+}
+
+.runtime {
+  left: 70rem;
+  position: relative;
+  margin-top: -39px;
+}
+
+.basic-btn1 {
+  left: 40rem;
+  position: relative;
+  font-size: 1.2rem;
+  margin-top: 2.5rem;
+  margin-right: 15px;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  background-color: #000;
 }
