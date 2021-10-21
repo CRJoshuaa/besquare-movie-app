@@ -32,19 +32,19 @@ button {
 
 .main-container {
   margin: 0 auto;
-  max-width: 1280px;
+  max-width: 60em;
 }
 
 .header {
   font-size: 3rem;
-  margin: 25px 0;
+  margin: 0.5em 0;
 }
 
 .basic-btn {
   font-size: 1.2rem;
-  margin-top: 10px;
-  margin-right: 15px;
-  padding: 10px 20px;
+  margin-top: 0.65em;
+  margin-right: 1em;
+  padding: 0.65em 1.25em;
   border: 2px solid #fff;
   border-radius: 25px;
   background-color: #000;
