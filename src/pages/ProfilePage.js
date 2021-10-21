@@ -1,5 +1,5 @@
 import React from "react";
-import "./Profile.css";
+import "./ProfilePage.css";
 import { Modal, Button } from "react-bootstrap";
 import {
   BsGlobe,
@@ -11,7 +11,7 @@ import { MdOutlineNotificationsActive } from "react-icons/md";
 
 const iconStyle = { marginRight: "0.9em" };
 
-function Profile() {
+function ProfilePage() {
   // watch history
   const [watch, setWatch] = React.useState(false);
   const watchClose = () => setWatch(false);
@@ -143,4 +143,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default ProfilePage;
