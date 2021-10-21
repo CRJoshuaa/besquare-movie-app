@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { genres } from "../Genre";
 import "./FeatureMovie.css";
-import "../App.css";
 
 function FeatureMovie() {
   const [movie, setMovie] = useState([]);
-  // const [genre, setGenre] = useState([]);
-  //https://api.themoviedb.org/3/genre/movie/list?api_key=66f24d566eb6008394159f46c59d027e&language=en-US
 
   useEffect(() => {
     fetch(
@@ -29,14 +27,9 @@ function FeatureMovie() {
     return new Date(date).toLocaleDateString([], options);
   };
 
-  // const showGenre = () => {
-  //   fetch(
-  //     "https://api.themoviedb.org/3/genre/movie/list?api_key=66f24d566eb6008394159f46c59d027e&language=en-US"
-  //   )
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setGenre(data.genres);
-  //     });
+  const findGenreFromId = (id) => {
+    return genres.find((g) => g.id === id);
+  };
 
   const playTrailer = () => {
     fetch(
@@ -53,7 +46,7 @@ function FeatureMovie() {
 
   return (
     <div className="feature-wrapper">
-      <h1 className="header">Featured today</h1>
+      {/* <h1 className="header">Featured today</h1> */}
       <div
         className="feature-poster"
         style={{
@@ -65,9 +58,14 @@ function FeatureMovie() {
         <div className="feature-wrapper-info">
           <h1 className="feature-wrapper-header">{movie?.title}</h1>
           <div className="feature-wrapper-details">
-            <span className="feature-movie-details" id="genre">
-              {movie?.genre_ids}
-            </span>
+            {movie?.genre_ids?.map((id, idx) => {
+              return (
+                <span key={idx} className="feature-movie-details" id="genre">
+                  {findGenreFromId(id).name}
+                </span>
+              );
+            })}
+
             <span className="feature-movie-details" id="date">
               {formatDate(movie?.release_date)}
             </span>
@@ -78,7 +76,7 @@ function FeatureMovie() {
 
           <div className="feature-wrapper-button">
             <button className="basic-btn">More Info</button>
-            <button className="basic-btn" onClick={playTrailer}>
+            <button className="basic-btn" id="active-btn" onClick={playTrailer}>
               View Trailer
             </button>
           </div>
