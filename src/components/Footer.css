@@ -1,5 +1,6 @@
 footer {
-  width: 1280px;
+  /* width: 1280px; */
+
   background-color: #0b0b0b;
   color: white;
   text-align: center;
@@ -81,6 +82,8 @@ footer {
 }
 #copyright {
   color: #aaaaaa;
+  display: flex;
+  justify-content: center;
 }
 
 .social-icon__item:hover {
@@ -119,5 +122,8 @@ a.social-icon__link:hover {
   }
   #description {
     width: 97%;
+  }
+  #copyright {
+    width: 100vw;
   }
 }
