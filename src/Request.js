@@ -10,6 +10,7 @@ const requests = {
   fetchRomanceMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
   fetchDocumentaries: `/discover/movie?api_key=${API_KEY}&with_genres=99`,
   fetchNowPlaying: `/movie/now_playing/?api_key=${API_KEY}&language=en-US&page=1&include_adult=false&language=en-US&page=1&include_adult=false`,
+  fetchTopRated2: `/movie/top_rated/?api_key=${API_KEY}&language=en-US&page=1&include_adult=false&language=en-US&page=1&include_adult=false`,
 };
 
 export default requests;
@@ -18,13 +19,10 @@ export default requests;
 https://api.themoviedb.org/3/discover/tv?api_key=a3827e96de599b6142d695f536ca566d&with_networks=213
 "https://image.tmdb.org/t/p/original/vFMvVG4KyMGwxOi9EB9JeIkLdvj.jpg"
 
-
-"/movie/now_playing/?api_key=${API_KEY}&language=en-US&page=1&include_adult=false&language=en-US&page=1&include_adult=false"
-
+/movie/top_rated/?api_key=${API_KEY}&language=en-US&page=1&include_adult=false&language=en-US&page=1&include_adult=false
 
 
-https://api.themoviedb.org/3/movie/now_playing/?api_key=a3827e96de599b6142d695f536ca566d&language=en-US&page=1&include_adult=false&language=en-US&page=1&include_adult=false
 
-https://api.themoviedb.org/3/trending/all/week?api_key=a3827e96de599b6142d695f536ca566d&language=en-US
+
 
 */
