@@ -6,12 +6,11 @@ import CategoryPoster from "./CategoryPoster";
 
 function Row({ title, fetchURL, isLargeRow = false }) {
   const [movies, setMovies] = useState([]);
-  const baseURL = "https://image.tmdb.org/t/p/original/";
 
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(fetchURL);
-      setMovies(request.data.results);
+      setMovies(request.data?.results);
       return request;
     }
     fetchData();
