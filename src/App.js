@@ -2,6 +2,7 @@ import HomeScreen from "./pages/HomeScreen";
 import "./App.css";
 import MoviePage from "./pages/MoviePage";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import ProfilePage from "./pages/ProfilePage";
 
 function App() {
   return (
