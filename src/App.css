@@ -31,8 +31,10 @@ button {
 /* Consistent Classes */
 
 .main-container {
-  margin: 0 auto;
-  max-width: 60em;
+  /* margin: 0 auto;
+  width: 100%; */
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .header {

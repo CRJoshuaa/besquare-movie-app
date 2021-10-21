@@ -19,7 +19,6 @@ function HomeScreen() {
         <Categories />
         <Footer title="Hello World" />
       </div>
-      {/* <Footer title="Hello World" /> */}
     </div>
   );
 }
