@@ -1,25 +1,23 @@
+import axios from "../axios";
 import React, { useState, useEffect } from "react";
 import { genres } from "../Genre";
 import "./FeatureMovie.css";
+import requests from "../Request";
 
 function FeatureMovie() {
   const [movie, setMovie] = useState([]);
 
   useEffect(() => {
-    fetch(
-      "https://api.themoviedb.org/3/movie/top_rated/?api_key=66f24d566eb6008394159f46c59d027e&language=en-US&page=1&include_adult=false&language=en-US&page=1&include_adult=false"
-    )
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        setMovie(
-          data.results[Math.floor(Math.random() * data.results.length - 1)]
-        );
-      })
-      .catch((e) => {
-        console.log(e);
-      });
+    async function fetchData() {
+      const request = await axios.get(requests.fetchTopRated);
+      setMovie(
+        request.data.results[
+          Math.floor(Math.random() * request.data.results.length - 1)
+        ]
+      );
+      return request;
+    }
+    fetchData();
   }, []);
 
   const formatDate = (date) => {
