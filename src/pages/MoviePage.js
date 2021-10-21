@@ -28,9 +28,12 @@ function MoviePage(props) {
     fetchData();
   }, [searchURL]);
   return (
-    <div>
-      <img src={`${base_URL}${movie.backdrop_path}`}></img>
-      <h1>{movie.original_title}</h1>
+    <div class="container">
+      <img className="backdrop" src={`${base_URL}${movie.poster_path}`}></img>
+      <h1 class="title">{movie.original_title}</h1>
+      <p className="overview">{movie.overview}</p>
+      <p className="vote_average">{movie.vote_average}</p>
+      <p className="user_score">User Score</p>
     </div>
   );
 }
