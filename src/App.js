@@ -1,4 +1,5 @@
 import HomeScreen from "./pages/HomeScreen";
+import FeatureMovie from "./components/FeatureMovie";
 import "./App.css";
 import MoviePage from "./pages/MoviePage";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
