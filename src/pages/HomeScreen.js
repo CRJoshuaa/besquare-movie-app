@@ -17,6 +17,7 @@ function HomeScreen() {
         <Row title="Now Playing" fetchURL={requests.fetchNowPlaying} />
         <Row title="Trending Now" fetchURL={requests.fetchComedyMovies} />
         <Categories />
+        <Footer title="Hello World" />
       </div>
       {/* <Footer title="Hello World" /> */}
     </div>
