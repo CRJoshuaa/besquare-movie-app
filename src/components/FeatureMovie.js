@@ -46,7 +46,7 @@ function FeatureMovie() {
 
   return (
     <div className="feature-wrapper">
-      <h1 className="header">Featured today</h1>
+      {/* <h1 className="header">Featured today</h1> */}
       <div
         className="feature-poster"
         style={{
@@ -76,7 +76,7 @@ function FeatureMovie() {
 
           <div className="feature-wrapper-button">
             <button className="basic-btn">More Info</button>
-            <button className="basic-btn" onClick={playTrailer}>
+            <button className="basic-btn" id="active-btn" onClick={playTrailer}>
               View Trailer
             </button>
           </div>
