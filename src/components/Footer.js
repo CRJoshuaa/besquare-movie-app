@@ -12,7 +12,7 @@ function Footer(props) {
   return (
     <footer className="footer">
       <div className="column" id="titleIcon">
-        <div className="title">{props.title}</div>
+        {/* <div className="title">{props.title}</div> */}
         <div className="icons">
           <ul className="social-icon">
             <li className="social-icon__item">
@@ -30,7 +30,7 @@ function Footer(props) {
                 <FontAwesomeIcon icon={faInstagram} size="2x" />
               </a>
             </li>
-            <li className="social-icon__item">
+            <li className="social-icon__item lastSocialIcon">
               <a class="social-icon__link" href="#">
                 <FontAwesomeIcon icon={faFacebook} size="2x" />
               </a>
@@ -39,10 +39,16 @@ function Footer(props) {
         </div>
       </div>
       <div className="column" id="description">
-        Lorem ipsum dolor sit amet. Est placeat iusto ea perferendis cumque quo
-        voluptatem iste aut maiores libero qui nihil distinctio ut velit
-        ducimus. Qui cumque voluptatem sit nesciunt vero et debitis dolor ut
-        praesentium repellendus et ipsa repudiandae
+        <p>
+          {/* Lorem ipsum dolor sit amet. Est placeat iusto ea perferendis cumque
+          quo voluptatem iste aut maiores libero qui nihil distinctio ut velit
+          ducimus. Qui cumque voluptatem sit nesciunt vero et debitis dolor ut
+          praesentium repellendus et ipsa repudiandae */}
+          We love films and storytelling as people.Its just a human compulsion
+          to listen to and tell stories.
+          <br />
+          -Stanley Kubrick
+        </p>
       </div>
       <div className="column" id="copyright">
         <p>&copy;2021 Group 6 BeSquare | All Rights Not Reserved</p>

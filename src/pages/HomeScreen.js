@@ -17,6 +17,7 @@ function HomeScreen() {
         <TrendingMovie />
         <NowPlaying />
         <Categories />
+        <Footer title="Hello World" />
       </div>
       {/* <Footer title="Hello World" /> */}
     </div>
