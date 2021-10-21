@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { genres } from "../Genre";
 import "./FeatureMovie.css";
 import requests from "../Request";
+import { Link } from "react-router-dom";
 
 function FeatureMovie() {
   const [movie, setMovie] = useState([]);
@@ -73,7 +74,9 @@ function FeatureMovie() {
           </div>
 
           <div className="feature-wrapper-button">
-            <button className="basic-btn">More Info</button>
+            <Link to={`movie/${movie?.id}`}>
+              <button className="basic-btn">More Info</button>
+            </Link>
             <button className="basic-btn" id="active-btn" onClick={playTrailer}>
               View Trailer
             </button>
