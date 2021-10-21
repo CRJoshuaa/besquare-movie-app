@@ -12,13 +12,10 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 25px;
-  /* opacity: 65%; */
-  box-shadow: 20px 20px 26px #080808, -20px -20px 26px #0e0e0e;
 }
 
 .feature-wrapper-info {
-  padding-left: 35px;
+  padding-left: 50px;
   letter-spacing: 1px;
   line-height: 1.5;
   color: #fff;
@@ -45,7 +42,7 @@
 }
 
 .feature-wrapper-button {
-  padding-bottom: 45px;
+  padding-bottom: 50px;
 }
 
 #genre {
