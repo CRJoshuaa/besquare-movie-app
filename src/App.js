@@ -1,12 +1,25 @@
 import HomeScreen from "./pages/HomeScreen";
+import FeatureMovie from "./components/FeatureMovie";
 import "./App.css";
-import Profile from "./pages/Profile";
+import MoviePage from "./pages/MoviePage";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <HomeScreen />
-      <Profile />
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/">
+            <HomeScreen />
+          </Route>
+          <Route path="/moviePage">
+            <MoviePage />
+          </Route>
+          <Route path="/movie/:id">
+            <MoviePage />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
