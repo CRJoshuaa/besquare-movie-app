@@ -1,32 +1,21 @@
-import React, { useEffect, useState } from "react";
-import axios from "../axios";
+import React, { useState } from "react";
 import requests from "../Request";
-import CategoryPoster from "./CategoryPoster";
 import "./Categories.css";
 import "../App.css";
+import Row from "./Row";
 
 function Categories() {
-  const [category, setCategory] = useState("action");
-  const [movies, setMovies] = useState([]);
+  const [category, setCategory] = useState("Action");
 
   const categoryFetch = {
-    action: requests.fetchActionMovies,
-    comedy: requests.fetchComedyMovies,
-    horror: requests.fetchHorrorMovies,
-    romance: requests.fetchRomanceMovies,
-    documentary: requests.fetchDocumentaries,
+    Action: requests.fetchActionMovies,
+    Comedy: requests.fetchComedyMovies,
+    Horror: requests.fetchHorrorMovies,
+    Romance: requests.fetchRomanceMovies,
+    Documentary: requests.fetchDocumentaries,
   };
 
   const fetchURL = categoryFetch[category];
-  useEffect(() => {
-    async function fetchData() {
-      const request = await axios.get(fetchURL);
-      setMovies(request.data.results);
-      return request;
-    }
-
-    fetchData();
-  }, [fetchURL]);
 
   return (
     <div className="categories">
@@ -38,7 +27,7 @@ function Categories() {
           className="basic-btn"
           id="action"
           onClick={() => {
-            setCategory("action");
+            setCategory("Action");
           }}
         >
           Action
@@ -47,7 +36,7 @@ function Categories() {
           className="basic-btn"
           id="comedy"
           onClick={() => {
-            setCategory("comedy");
+            setCategory("Comedy");
           }}
         >
           Comedy
@@ -56,7 +45,7 @@ function Categories() {
           className="basic-btn"
           id="horror"
           onClick={() => {
-            setCategory("horror");
+            setCategory("Horror");
           }}
         >
           Horror
@@ -65,7 +54,7 @@ function Categories() {
           className="basic-btn"
           id="romance"
           onClick={() => {
-            setCategory("romance");
+            setCategory("Romance");
           }}
         >
           Romance
@@ -74,17 +63,14 @@ function Categories() {
           className="basic-btn"
           id="documentary"
           onClick={() => {
-            setCategory("documentary");
+            setCategory("Documentary");
           }}
         >
           Documentary
         </button>
       </div>
-      <div className="category-panels">
-        {movies.map((movie) => {
-          return <CategoryPoster key={movie.id} movieObj={movie} />;
-        })}
-      </div>
+
+      <Row title={category} fetchURL={fetchURL} />
     </div>
   );
 }
