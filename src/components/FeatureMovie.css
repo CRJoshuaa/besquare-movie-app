@@ -1,21 +1,21 @@
 /* poster-dimensions:[height:720px, width:1280px] */
 
 .feature-wrapper {
-  margin: 15px 0;
+  margin: 1em 0;
   width: 100%;
   height: auto;
 }
 
 .feature-poster {
-  width: 1280px;
-  height: 720px;
+  width: 60em;
+  height: 33.75em;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .feature-wrapper-info {
-  padding-left: 50px;
+  padding-left: 3em;
   letter-spacing: 1px;
   line-height: 1.5;
   color: #fff;
@@ -27,22 +27,22 @@
 
 .feature-wrapper-header {
   line-height: normal;
-  font-size: 2.5rem;
+  font-size: 2.75rem;
 }
 
 .feature-wrapper-details {
-  margin: 10px 0px;
+  margin: 0.6em 0px;
   font-weight: bold;
 }
 
 .feature-movie-details {
   color: #f1f2f6;
-  margin-right: 15px;
+  margin-right: 1em;
   font-weight: bolder;
 }
 
 .feature-wrapper-button {
-  padding-bottom: 50px;
+  padding-bottom: 3em;
 }
 
 #genre {
