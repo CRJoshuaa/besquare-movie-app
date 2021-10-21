@@ -1,5 +1,6 @@
 .category-poster {
-  height: 16em;
+  height: 14em;
+  padding-top: 1em;
   object-fit: contain;
   margin: 0.5em;
 
