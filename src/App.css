@@ -4,11 +4,8 @@ body {
   box-sizing: border-box;
   color: #ffff;
   background-color: #0b0b0b;
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 25px;
-
-  margin: 0 auto;
-  max-width: 1280px;
 }
 
 h1,
@@ -33,6 +30,11 @@ button {
 
 /* Consistent Classes */
 
+.main-container {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
 .header {
   font-size: 3rem;
   margin: 25px 0;
@@ -42,11 +44,13 @@ button {
   font-size: 1.2rem;
   margin-top: 10px;
   margin-right: 15px;
-  padding: 8px 15px;
-  border: 1px solid #fff;
+  padding: 10px 20px;
+  border: 2px solid #fff;
   border-radius: 25px;
+  background-color: #000;
 }
 
-.basic-btn:hover {
-  background-color: #0b0b0b;
+#active-btn {
+  background-color: #21d4fd;
+  background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
 }
