@@ -1,12 +1,13 @@
 footer {
-  width: 100vw;
-  background-color: #3586ff;
+  width: 1280px;
+  background-color: #0b0b0b;
   color: white;
   text-align: center;
   height: 300px;
   padding: 20px;
   border-radius: 5px;
-  animation: animateBackground 5s linear infinite;
+
+  font-size: 1.2rem;
 
   /* width: 100%;
   background: #3586ff;
@@ -37,14 +38,18 @@ footer {
 #titleIcon {
   display: flex;
   align-items: center;
+  height: 10%;
+  padding-top: 25px;
 }
 
-.title {
+/* .title {
   width: 50%;
   font-size: 50px;
-}
+} */
 .icons {
-  width: 50%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 .social-icon {
@@ -60,24 +65,35 @@ footer {
 
 .social-icon__item {
   list-style: none;
-  padding-left: 50px;
+  padding-right: 50px;
   transition: 0.5s;
+}
+.lastSocialIcon {
+  padding-right: 0px;
 }
 
 #description {
-  width: 98%;
+  display: flex;
+  justify-content: center;
+  width: 97%;
   margin-top: 40px;
+  quotes: "'" "'";
+}
+#copyright {
+  color: #aaaaaa;
 }
 
 .social-icon__item:hover {
   transform: translateY(-10px);
-  color: #aaaaaa;
 }
 a.social-icon__link {
   color: #ffffff;
 }
+a.social-icon__link:hover {
+  color: #aaaaaa;
+}
 
-@keyframes animateBackground {
+/* @keyframes animateBackground {
   0% {
     background-color: rgb(100, 199, 206);
   }
@@ -92,5 +108,16 @@ a.social-icon__link {
   }
   100% {
     background-color: rgb(3, 120, 199);
+  }
+} */
+
+@media only screen and (max-width: 500px) {
+  /* For mobile phones: */
+  footer {
+    width: 100vw;
+    height: 100vh;
+  }
+  #description {
+    width: 97%;
   }
 }

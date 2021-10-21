@@ -6,7 +6,7 @@
 
 .category-buttons {
   display: flex;
-  padding-bottom: 1em;
+  padding-bottom: 1.6em;
 }
 
 .category-panels {
