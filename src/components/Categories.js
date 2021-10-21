@@ -24,7 +24,6 @@ function Categories() {
       setMovies(request.data.results);
       return request;
     }
-    console.log(movies);
 
     fetchData();
   }, [fetchURL]);

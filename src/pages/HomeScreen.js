@@ -5,8 +5,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "./HomeScreen.css";
 import "../App.css";
-import NowPlaying from "../components/NowPlaying";
-import TrendingMovie from "../components/TrendingMovie";
+import Row from "../components/Row";
+import requests from "../Request";
 
 function HomeScreen() {
   return (
@@ -14,8 +14,8 @@ function HomeScreen() {
       <div className="main-container">
         <Header />
         <FeatureMovie />
-        <TrendingMovie />
-        <NowPlaying />
+        <Row title="Now Playing" fetchURL={requests.fetchNowPlaying} />
+        <Row title="Trending Now" fetchURL={requests.fetchComedyMovies} />
         <Categories />
       </div>
       {/* <Footer title="Hello World" /> */}

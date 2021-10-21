@@ -1,0 +1,22 @@
+.row {
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.category-buttons {
+  display: flex;
+  padding-bottom: 25px;
+}
+
+.category-panels {
+  display: flex;
+  overflow-x: scroll;
+  height: 300px;
+}
+.category-panels::-webkit-scrollbar {
+  display: none;
+}
