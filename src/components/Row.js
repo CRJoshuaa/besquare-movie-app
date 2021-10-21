@@ -1,5 +1,6 @@
 import axios from "../axios";
 import React, { useEffect, useState } from "react";
+import "../App.css";
 import "./Row.css";
 import CategoryPoster from "./CategoryPoster";
 
@@ -18,7 +19,7 @@ function Row({ title, fetchURL, isLargeRow = false }) {
 
   return (
     <div className="row">
-      <h2>{title}</h2>
+      <h1 className="header">{title}</h1>
       <div className="category-panels">
         {movies.map((movie) => {
           return <CategoryPoster key={movie.id} movieObj={movie} />;

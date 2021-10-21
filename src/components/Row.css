@@ -6,13 +6,13 @@
 
 .category-buttons {
   display: flex;
-  padding-bottom: 25px;
+  padding-bottom: 1em;
 }
 
 .category-panels {
   display: flex;
   overflow-x: scroll;
-  height: 300px;
+  height: 20em;
 }
 .category-panels::-webkit-scrollbar {
   display: none;
