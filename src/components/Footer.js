@@ -16,22 +16,22 @@ function Footer(props) {
         <div className="icons">
           <ul className="social-icon">
             <li className="social-icon__item">
-              <a class="social-icon__link" href="#">
+              <a className="social-icon__link" href="#">
                 <FontAwesomeIcon icon={faYoutube} size="2x" />
               </a>
             </li>
             <li className="social-icon__item">
-              <a class="social-icon__link" href="#">
+              <a className="social-icon__link" href="#">
                 <FontAwesomeIcon icon={faTwitter} size="2x" />
               </a>
             </li>
             <li className="social-icon__item">
-              <a class="social-icon__link" href="#">
+              <a className="social-icon__link" href="#">
                 <FontAwesomeIcon icon={faInstagram} size="2x" />
               </a>
             </li>
             <li className="social-icon__item">
-              <a class="social-icon__link" href="#">
+              <a className="social-icon__link" href="#">
                 <FontAwesomeIcon icon={faFacebook} size="2x" />
               </a>
             </li>
