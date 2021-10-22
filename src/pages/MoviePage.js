@@ -1,22 +1,37 @@
 import React, { useEffect, useState } from "react";
-import FeatureMovie from "../components/FeatureMovie";
-import Header from "../components/Header";
-import "./HomeScreen.css";
-import "../App.css";
 import axios from "../axios";
+import { genres } from "../Genre";
 import { useLocation } from "react-router-dom";
+import "../App.css";
+import "./HomeScreen.css";
 import "../pages/MoviePage.css";
-import "../components/FeatureMovie.css";
+import Row from "../components/Row";
+import requests from "../Request";
+import Header from "../components/Header";
 
-function MoviePage(props) {
+function MoviePage() {
   const [movie, setMovie] = useState({});
   const path = useLocation();
   const movieId = parseInt(String(path.pathname).slice(7));
-  console.log(movieId);
+  const searchURL = `https://api.themoviedb.org/3/movie/${movieId}?api_key=a3827e96de599b6142d695f536ca566d`;
+  const base_URL = "https://image.tmdb.org/t/p/original/";
+
+  useEffect(() => {
+    async function fetchData() {
+      const request = await axios.get(searchURL);
+      setMovie(request.data);
+      return request;
+    }
+    fetchData();
+  }, [searchURL]);
 
   const formatDate = (date) => {
-    var options = { year: "numeric" };
+    var options = { year: "numeric", month: "short", day: "numeric" };
     return new Date(date).toLocaleDateString([], options);
+  };
+
+  const findGenreFromId = (id) => {
+    return genres.find((g) => g.id === id);
   };
 
   const playTrailer = () => {
@@ -31,33 +46,61 @@ function MoviePage(props) {
         window.open(`https://www.youtube.com/watch?v=${videoKey}`);
       });
   };
-
-  const searchURL = `https://api.themoviedb.org/3/movie/${movieId}?api_key=a3827e96de599b6142d695f536ca566d`;
-  //https://api.themoviedb.org/3/movie/343611?api_key=a3827e96de599b6142d695f536ca566d
-  const base_URL = "https://image.tmdb.org/t/p/original/";
-
-  useEffect(() => {
-    async function fetchData() {
-      const request = await axios.get(searchURL);
-      setMovie(request.data);
-
-      return request;
-    }
-
-    fetchData();
-  }, [searchURL]);
   return (
-    <div class="container">
-      <img className="backdrop" src={`${base_URL}${movie.poster_path}`}></img>
-      <h1 class="title">{movie.original_title}</h1>
-      <p className="overview">{movie.overview}</p>
-      <p className="vote_average">{movie.vote_average}</p>
-      <p className="user_score">User Score</p>
-      <p className="release_date">{formatDate(movie.release_date)}</p>
-      <p className="runtime">{movie.runtime} minutes</p>
-      <button className="basic-btn1" id="active-btn" onClick={playTrailer}>
-        View Trailer
-      </button>
+    <div
+      className="feature-poster"
+      style={{
+        backgroundImage: ` linear-gradient(to bottom, transparent 0%, black 100%),url(https://image.tmdb.org/t/p/w1280/${
+          movie.backdrop_path || ""
+        })`,
+      }}
+    >
+      <Header />
+      <div className="mp-container">
+        <div className="mp-wrapper-poster">
+          <img
+            className="mp-poster"
+            src={`${base_URL}${movie.poster_path}`}
+            alt={movie.title}
+          ></img>
+          <div className="mp-wrapper-info">
+            <h1 className="header mp-header">{movie.title}</h1>
+            <div className="mp-wrapper-genre">
+              {movie?.genres?.map((movie, idx) => {
+                return (
+                  <span key={idx} className="mp-movie-genre" id="mp-genre">
+                    {movie.name}
+                  </span>
+                );
+              })}
+            </div>
+            <div className="mp-wrapper-detail">
+              <span className="mp-movie-detail">
+                Score: {movie.vote_average}/10
+              </span>
+              <span className="mp-movie-detail">
+                Date: {formatDate(movie.release_date)}
+              </span>
+              <span className="mp-movie-detail">
+                Runtime: {movie.runtime} minutes
+              </span>
+            </div>
+            <div className="mp-wrapper-overview">
+              <p className="mp-overview">{movie.overview}</p>
+            </div>
+            <div className="mp-wrapper-btn">
+              <button
+                className="big-btn mp-btn"
+                id="active-btn"
+                onClick={playTrailer}
+              >
+                View Trailer
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Row title="You might like" fetchURL={requests.fetchTopRated} />
     </div>
   );
 }

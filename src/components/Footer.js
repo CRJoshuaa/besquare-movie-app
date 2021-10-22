@@ -1,4 +1,5 @@
 import React from "react";
+import "../App.css";
 import "./Footer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -16,22 +17,38 @@ function Footer(props) {
         <div className="icons">
           <ul className="social-icon">
             <li className="social-icon__item">
-              <a className="social-icon__link" href="#">
+              <a
+                className="social-icon__link"
+                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                target="_blank"
+              >
                 <FontAwesomeIcon icon={faYoutube} size="2x" />
               </a>
             </li>
             <li className="social-icon__item">
-              <a className="social-icon__link" href="#">
+              <a
+                className="social-icon__link"
+                href="https://twitter.com/coolbloxyt/status/1448650817951584264?s=20"
+                target="_blank"
+              >
                 <FontAwesomeIcon icon={faTwitter} size="2x" />
               </a>
             </li>
             <li className="social-icon__item">
-              <a className="social-icon__link" href="#">
+              <a
+                className="social-icon__link"
+                href="https://www.instagram.com/"
+                target="_blank"
+              >
                 <FontAwesomeIcon icon={faInstagram} size="2x" />
               </a>
             </li>
-            <li className="social-icon__item">
-              <a className="social-icon__link" href="#">
+            <li className="lastSocialIcon">
+              <a
+                className="social-icon__link"
+                href="https://www.facebook.com/"
+                target="_blank"
+              >
                 <FontAwesomeIcon icon={faFacebook} size="2x" />
               </a>
             </li>
@@ -44,8 +61,8 @@ function Footer(props) {
           quo voluptatem iste aut maiores libero qui nihil distinctio ut velit
           ducimus. Qui cumque voluptatem sit nesciunt vero et debitis dolor ut
           praesentium repellendus et ipsa repudiandae */}
-          We love films and storytelling as people.Its just a human compulsion
-          to listen to and tell stories.
+          "We love films and storytelling as people.Its just a human compulsion
+          to listen to and tell stories."
           <br />
           -Stanley Kubrick
         </p>
