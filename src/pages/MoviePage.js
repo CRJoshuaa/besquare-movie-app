@@ -5,6 +5,8 @@ import { useLocation } from "react-router-dom";
 import "../App.css";
 import "./HomeScreen.css";
 import "../pages/MoviePage.css";
+import Row from "../components/Row";
+import requests from "../Request";
 
 function MoviePage() {
   const [movie, setMovie] = useState({});
@@ -96,6 +98,7 @@ function MoviePage() {
           </div>
         </div>
       </div>
+      <Row title="You might like" fetchURL={requests.fetchTopRated} />
     </div>
   );
 }
