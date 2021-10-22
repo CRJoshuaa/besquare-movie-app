@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./ProfilePage.css";
 import { Modal, Button } from "react-bootstrap";
 import {
@@ -29,6 +29,22 @@ function ProfilePage() {
   const logoutClose = () => setLogout(false);
   const logoutShow = () => setLogout(true);
 
+  //window resize responsive
+  const [size, setSize] = useState(true);
+  const showSize = () => {
+    if (window.innerWidth <= 960) {
+      setSize(false);
+    } else {
+      setSize(true);
+    }
+  };
+
+  useEffect(() => {
+    showSize();
+  }, []);
+
+  window.addEventListener("resize", showSize);
+
   return (
     <div className="profile-wrapper">
       <div className="profile-wrapper-bg filter-bg">
@@ -37,11 +53,11 @@ function ProfilePage() {
         </div>
 
         <div className="profile-details-wrapper">
-          <div>
+          <div className="profile-pic-wrapper">
             <button className="profile-pic"></button>
           </div>
           <div className="profile-details">
-            <h1 style={{ letterSpacing: 0.5 }}>Amirul Hazwan</h1>
+            <h1 style={{ letterSpacing: 0.5 }}>Zee</h1>
             <p>amirul@besquare.com.my</p>
             <p>Malaysia</p>
           </div>
@@ -59,7 +75,7 @@ function ProfilePage() {
             <BsPhone style={iconStyle} />
             Phone
           </button>
-          <div className="setting-item4">+(60)11-123-1234</div>
+          <div className="setting-item4">0111231234</div>
           <button className="setting-item5">
             <MdOutlineNotificationsActive style={iconStyle} />
             Notification

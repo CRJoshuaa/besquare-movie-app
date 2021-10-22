@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-            <HomeScreen />
+            <ProfilePage />
           </Route>
           <Route path="/moviePage">
             <MoviePage />
