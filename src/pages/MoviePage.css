@@ -52,6 +52,11 @@
     padding: 0em;
     flex-direction: column;
     text-align: center;
+    overflow-x: hidden;
+  }
+
+  .mp-wrapper-poster {
+    margin: 150px 0px 55px 0px;
   }
 
   .mp-wrapper-info {
