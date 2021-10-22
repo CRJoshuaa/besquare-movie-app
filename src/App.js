@@ -10,13 +10,16 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/">
-            <ProfilePage />
+            <HomeScreen />
           </Route>
           <Route path="/moviePage">
             <MoviePage />
           </Route>
           <Route path="/movie/:id">
             <MoviePage />
+          </Route>
+          <Route path="/profile">
+            <ProfilePage />
           </Route>
         </Switch>
       </BrowserRouter>
