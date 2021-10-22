@@ -6,7 +6,17 @@ footer {
   padding: 20px;
   border-radius: 5px;
 
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+
+  /* width: 100%;
+  background: #3586ff;
+  height: 200px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: ce nter;
+  flex-direction: column;
+  position: absolute; */
 }
 
 .footer-container {
@@ -53,7 +63,9 @@ footer {
   transition: 0.5s;
 }
 .lastSocialIcon {
-  padding-right: 0px;
+  padding-right: 50px;
+  transition: 0.5s;
+  list-style: none;
 }
 
 #description {
@@ -62,6 +74,7 @@ footer {
   width: 97%;
   margin-top: 40px;
   quotes: "'" "'";
+  margin-bottom: 25px;
 }
 #copyright {
   color: #aaaaaa;
@@ -101,7 +114,8 @@ a.social-icon__link:hover {
   /* For mobile phones: */
   footer {
     /* width: 100vw;
-    height: 100vh; */
+    height: 100vh;  */
+    font-size: 4vw;
   }
   #description {
     /* width: 97%;
@@ -109,5 +123,13 @@ a.social-icon__link:hover {
   }
   #copyright {
     /* width: 100vw; */
+  }
+  .social-icon__item {
+    padding-right: 50px;
+  }
+  .lastSocialIcon {
+    padding-right: 0px;
+    transition: 0.5s;
+    list-style: none;
   }
 }
