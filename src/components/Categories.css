@@ -11,6 +11,10 @@
   width: 100vw;
 }
 
+.category-buttons > button:active {
+  background-color: grey;
+}
+
 .category-panels {
   display: flex;
   overflow-x: scroll;

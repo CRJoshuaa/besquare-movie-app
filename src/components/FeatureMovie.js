@@ -1,5 +1,5 @@
-import axios from "../axios";
 import React, { useState, useEffect } from "react";
+import axios from "../axios";
 import { genres } from "../Genre";
 import "./FeatureMovie.css";
 import requests from "../Request";
@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 function FeatureMovie() {
   const [movie, setMovie] = useState([]);
 
+  // Fetch data from the API
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(requests.fetchTopRated);
@@ -21,15 +22,18 @@ function FeatureMovie() {
     fetchData();
   }, []);
 
+  // Format Date to show Years only
   const formatDate = (date) => {
     var options = { year: "numeric" };
     return new Date(date).toLocaleDateString([], options);
   };
 
+  // Assign genre id to genre name
   const findGenreFromId = (id) => {
     return genres.find((g) => g.id === id);
   };
 
+  // play trailer on youtube
   const playTrailer = () => {
     fetch(
       `http://api.themoviedb.org/3/movie/${movie.id}/videos?api_key=66f24d566eb6008394159f46c59d027e&`

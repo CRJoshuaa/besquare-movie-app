@@ -8,6 +8,7 @@ function Header() {
   const [show, handleShow] = useState(false);
   const history = useHistory();
 
+  //toggle the state for header background
   const transitionNavBar = () => {
     if (window.scrollY > 100) {
       handleShow(true);
@@ -20,6 +21,7 @@ function Header() {
     window.addEventListener("scroll", transitionNavBar);
     return () => window.removeEventListener("scroll", transitionNavBar);
   }, []);
+
   return (
     <div className={`nav ${show && "nav_black"}`}>
       <div className="nav_contents">

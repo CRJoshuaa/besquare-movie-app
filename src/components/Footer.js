@@ -9,11 +9,10 @@ import {
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 
-function Footer(props) {
+function Footer() {
   return (
     <footer className="footer">
       <div className="column" id="titleIcon">
-        {/* <div className="title">{props.title}</div> */}
         <div className="icons">
           <ul className="social-icon">
             <li className="social-icon__item">

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "../axios";
-import { genres } from "../Genre";
+// import { genres } from "../Genre";
 import { useLocation } from "react-router-dom";
 import "../App.css";
 import "./HomeScreen.css";
@@ -8,6 +8,7 @@ import "../pages/MoviePage.css";
 import Row from "../components/Row";
 import requests from "../Request";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function MoviePage() {
   const [movie, setMovie] = useState({});
@@ -16,6 +17,7 @@ function MoviePage() {
   const searchURL = `https://api.themoviedb.org/3/movie/${movieId}?api_key=a3827e96de599b6142d695f536ca566d`;
   const base_URL = "https://image.tmdb.org/t/p/original/";
 
+  // Fetch data from API
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(searchURL);
@@ -25,15 +27,17 @@ function MoviePage() {
     fetchData();
   }, [searchURL]);
 
+  // Format Date to show Years only
   const formatDate = (date) => {
     var options = { year: "numeric", month: "short", day: "numeric" };
     return new Date(date).toLocaleDateString([], options);
   };
 
-  const findGenreFromId = (id) => {
-    return genres.find((g) => g.id === id);
-  };
+  // const findGenreFromId = (id) => {
+  //   return genres.find((g) => g.id === id);
+  // };
 
+  // Play trailer on youtube
   const playTrailer = () => {
     fetch(
       `http://api.themoviedb.org/3/movie/${movie.id}/videos?api_key=66f24d566eb6008394159f46c59d027e&`
@@ -101,6 +105,7 @@ function MoviePage() {
         </div>
       </div>
       <Row title="You might like" fetchURL={requests.fetchTopRated} />
+      <Footer />
     </div>
   );
 }

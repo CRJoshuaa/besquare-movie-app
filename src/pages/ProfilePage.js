@@ -9,6 +9,7 @@ import {
 } from "react-icons/bs";
 import { MdOutlineNotificationsActive } from "react-icons/md";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const iconStyle = { marginRight: "0.9em" };
 
@@ -156,6 +157,7 @@ function ProfilePage() {
           </Modal>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
