@@ -7,17 +7,3 @@
 .row-panels::-webkit-scrollbar {
   display: none;
 }
-
-/* mobile */
-@media only screen and (min-width: 320px) and (max-width: 480px) {
-  .header {
-    font-size: 1.5rem;
-  }
-}
-
-/* Desktops, Large Screens ----------- */
-@media only screen and (min-width: 481px) and (max-width: 720px) {
-  .header {
-    font-size: 2rem;
-  }
-}
