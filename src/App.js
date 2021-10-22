@@ -18,6 +18,9 @@ function App() {
           <Route path="/movie/:id">
             <MoviePage />
           </Route>
+          <Route path="/profile">
+            <ProfilePage />
+          </Route>
         </Switch>
       </BrowserRouter>
     </div>

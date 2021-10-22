@@ -8,6 +8,7 @@ import {
   BsBoxArrowRight,
 } from "react-icons/bs";
 import { MdOutlineNotificationsActive } from "react-icons/md";
+import Header from "../components/Header";
 
 const iconStyle = { marginRight: "0.9em" };
 
@@ -47,6 +48,7 @@ function ProfilePage() {
 
   return (
     <div className="profile-wrapper">
+      <Header />
       <div className="profile-wrapper-bg filter-bg">
         <div>
           <p className="profile-wrapper-header">Profile</p>
@@ -63,7 +65,6 @@ function ProfilePage() {
           </div>
         </div>
       </div>
-
       <div className="profile-setting">
         <div className="settings-wrapper">
           <button className="setting-item1">

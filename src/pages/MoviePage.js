@@ -7,6 +7,7 @@ import "./HomeScreen.css";
 import "../pages/MoviePage.css";
 import Row from "../components/Row";
 import requests from "../Request";
+import Header from "../components/Header";
 
 function MoviePage() {
   const [movie, setMovie] = useState({});
@@ -54,6 +55,7 @@ function MoviePage() {
         })`,
       }}
     >
+      <Header />
       <div className="mp-container">
         <div className="mp-wrapper-poster">
           <img
