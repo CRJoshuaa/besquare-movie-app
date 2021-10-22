@@ -1,6 +1,4 @@
 footer {
-  /* width: 1280px; */
-
   background-color: #0b0b0b;
   color: white;
   text-align: center;
@@ -9,16 +7,6 @@ footer {
   border-radius: 5px;
 
   font-size: 1.2rem;
-
-  /* width: 100%;
-  background: #3586ff;
-  height: 200px;
-  padding: 20px 50px;
-  display: flex;
-  justify-content: center;
-  align-items: ce nter;
-  flex-direction: column;
-  position: absolute; */
 }
 
 .footer-container {
@@ -55,13 +43,8 @@ footer {
 
 .social-icon {
   display: flex;
-  position: relative;
-  display: flex;
+  justify-content: center;
   align-items: center;
-  /* justify-content: center;
-  flex-wrap: wrap;
-  margin-right: 10px;
-  flex-wrap: wrap; */
 }
 
 .social-icon__item {
