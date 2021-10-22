@@ -1,9 +1,10 @@
 footer {
-  width: 1280px;
+  /* width: 1280px; */
+
   background-color: #0b0b0b;
   color: white;
   text-align: center;
-  height: 300px;
+  min-height: 300px;
   padding: 20px;
   border-radius: 5px;
 
@@ -81,6 +82,8 @@ footer {
 }
 #copyright {
   color: #aaaaaa;
+  display: flex;
+  justify-content: center;
 }
 
 .social-icon__item:hover {
@@ -114,10 +117,14 @@ a.social-icon__link:hover {
 @media only screen and (max-width: 500px) {
   /* For mobile phones: */
   footer {
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw;
+    height: 100vh; */
   }
   #description {
-    width: 97%;
+    /* width: 97%;
+    height: 20vh; */
+  }
+  #copyright {
+    /* width: 100vw; */
   }
 }

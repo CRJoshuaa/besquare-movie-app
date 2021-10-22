@@ -19,7 +19,7 @@ function Row({ title, fetchURL, isLargeRow = false }) {
   return (
     <div className="row">
       <h1 className="header">{title}</h1>
-      <div className="category-panels">
+      <div className="row-panels">
         {movies.map((movie) => {
           return <CategoryPoster key={movie.id} movieObj={movie} />;
         })}
