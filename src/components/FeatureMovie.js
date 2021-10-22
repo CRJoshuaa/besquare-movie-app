@@ -63,7 +63,7 @@ function FeatureMovie() {
                 </span>
               );
             })}
-
+            <br className="mobile-break" />
             <span className="feature-movie-details" id="date">
               {formatDate(movie?.release_date)}
             </span>
@@ -74,9 +74,13 @@ function FeatureMovie() {
 
           <div className="feature-wrapper-button">
             <Link to={`movie/${movie?.id}`}>
-              <button className="basic-btn">More Info</button>
+              <button className="basic-btn fm-btn">More Info</button>
             </Link>
-            <button className="basic-btn" id="active-btn" onClick={playTrailer}>
+            <button
+              className="basic-btn fm-btn"
+              id="active-btn"
+              onClick={playTrailer}
+            >
               View Trailer
             </button>
           </div>
