@@ -3,7 +3,6 @@ import axios from "../axios";
 import { genres } from "../Genre";
 import { useLocation } from "react-router-dom";
 import "../App.css";
-import "../components/FeatureMovie.css";
 import "./HomeScreen.css";
 import "../pages/MoviePage.css";
 import Row from "../components/Row";
@@ -46,53 +45,56 @@ function MoviePage() {
         window.open(`https://www.youtube.com/watch?v=${videoKey}`);
       });
   };
-  console.log(movie);
   return (
-    <div className="main-container">
-      <div
-        className="feature-poster  mp-wrapper"
-        style={{
-          backgroundImage: ` linear-gradient(to bottom, transparent 0%, black 100%),url(https://image.tmdb.org/t/p/w1280/${
-            movie.backdrop_path || ""
-          })`,
-        }}
-      >
+    <div
+      className="feature-poster"
+      style={{
+        backgroundImage: ` linear-gradient(to bottom, transparent 0%, black 100%),url(https://image.tmdb.org/t/p/w1280/${
+          movie.backdrop_path || ""
+        })`,
+      }}
+    >
+      <div className="mp-container">
         <div className="mp-wrapper-poster">
           <img
             className="mp-poster"
             src={`${base_URL}${movie.poster_path}`}
             alt={movie.title}
           ></img>
-        </div>
-        <div className="mp-wrapper-info">
-          <h1 className="title">{movie.title}</h1>
-          <div className="mp-wrapper-detail">
+          <div className="mp-wrapper-info">
+            <h1 className="header mp-header">{movie.title}</h1>
             <div className="mp-wrapper-genre">
               {movie?.genres?.map((movie, idx) => {
                 return (
-                  <span key={idx} className="mp-movie-details" id="mp-genre">
+                  <span key={idx} className="mp-movie-genre" id="mp-genre">
                     {movie.name}
                   </span>
                 );
               })}
             </div>
-            <span className="mp-movie-detail">
-              Score: {movie.vote_average}/10
-            </span>
-            <span className="mp-movie-detail">
-              Date: {formatDate(movie.release_date)}
-            </span>
-            <span className="mp-movie-detail">
-              Runtime: {movie.runtime} minutes
-            </span>
-          </div>
-          <div className="mp-wrapper-description">
-            <p className="mp-overview">{movie.overview}</p>
-          </div>
-          <div className="mp-wrapper-btn">
-            <button className="big-btn" id="active-btn" onClick={playTrailer}>
-              View Trailer
-            </button>
+            <div className="mp-wrapper-detail">
+              <span className="mp-movie-detail">
+                Score: {movie.vote_average}/10
+              </span>
+              <span className="mp-movie-detail">
+                Date: {formatDate(movie.release_date)}
+              </span>
+              <span className="mp-movie-detail">
+                Runtime: {movie.runtime} minutes
+              </span>
+            </div>
+            <div className="mp-wrapper-overview">
+              <p className="mp-overview">{movie.overview}</p>
+            </div>
+            <div className="mp-wrapper-btn">
+              <button
+                className="big-btn mp-btn"
+                id="active-btn"
+                onClick={playTrailer}
+              >
+                View Trailer
+              </button>
+            </div>
           </div>
         </div>
       </div>
