@@ -20,13 +20,11 @@ button {
 .profile-wrapper-bg {
   width: 100%;
   height: 100%;
-  /* padding: 0px 4rem 2rem 4rem; */
   border-top-right-radius: 2rem;
   border-top-left-radius: 2rem;
   background-color: rgb(41, 41, 41);
   background-image: url(https://i.ytimg.com/vi/WoCecJr2fbs/maxresdefault.jpg);
   background-size: cover;
-  /* box-shadow: 2px 9px 20px 2px rgb(56, 56, 56); */
 }
 .profile-wrapper-header {
   margin: 0;
@@ -55,8 +53,8 @@ button {
 }
 
 .profile-details {
-  width: 300px;
-  padding: 2rem;
+  width: 350px;
+  padding: 0rem 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,15 +63,15 @@ button {
 .profile-details p {
   font-size: 25px;
 }
-
+.profile-details h1 {
+  font-size: 40px;
+}
 .profile-setting {
-  width: 780px;
+  width: 100%;
   height: 550px;
-  /* padding: 0px 4rem; */
   border-bottom-right-radius: 2rem;
   border-bottom-left-radius: 2rem;
   background-color: black;
-  /* box-shadow: 2px 9px 20px 2px rgb(56, 56, 56); */
 }
 .settings-wrapper {
   font-size: 25px;
@@ -267,12 +265,14 @@ button {
   margin: 10px 10px 0px 10px;
   font-size: 20px;
   padding: 1rem 2rem;
+  border-radius: 2rem;
 }
 .btn-save {
   background-color: rgb(150, 150, 150);
   margin: 10px 0px 0px 0px;
   font-size: 20px;
   padding: 1rem 2rem;
+  border-radius: 2rem;
 }
 
 .btn-close:hover {
@@ -282,4 +282,218 @@ button {
 .btn-save:hover {
   font-weight: bolder;
   color: #f1c40f;
+}
+
+/* Responsive Window */
+
+/* Mobile Devices ----------- */
+@media only screen and (max-width: 480px) {
+  .profile-wrapper {
+    display: grid;
+    justify-content: center;
+  }
+  .profile-wrapper-bg {
+    border-top-right-radius: 0rem;
+    border-top-left-radius: 0rem;
+    padding-bottom: 1rem;
+  }
+  .profile-wrapper-header {
+    padding: 2rem 60px 0px 60px;
+    font-size: 30px;
+  }
+  .profile-details-wrapper {
+    display: unset;
+  }
+  .profile-pic-wrapper {
+    padding: 1rem 7rem;
+    backdrop-filter: blur(3px);
+  }
+  .profile-details {
+    display: unset;
+    padding: unset;
+  }
+  .profile-details p {
+    font-size: 15px;
+    text-align: center;
+  }
+  .profile-details h1 {
+    text-align: center;
+    font-size: 30px;
+    backdrop-filter: blur(3px);
+  }
+  .settings-wrapper {
+    font-size: 20px;
+    padding: 0px;
+  }
+  .profile-setting {
+    padding: 1rem 2rem;
+    height: 420px;
+    border-bottom-right-radius: 0 rem;
+    border-bottom-left-radius: 0 rem;
+  }
+  .setting-item1,
+  .setting-item3,
+  .setting-item5,
+  .privacy-item1,
+  .privacy-item2,
+  .privacy-item3,
+  .setting-item7 {
+    font-size: 20px;
+  }
+  .setting-item2,
+  .setting-item4 {
+    text-align: right;
+  }
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    width: 300px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 1055;
+  }
+  .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: rgb(27, 27, 27);
+    /* box-shadow: 4px 10px 22px 4px rgb(61, 61, 61); */
+    border-radius: 2rem;
+  }
+  .modal-header {
+    text-align: center;
+  }
+  .modal-body {
+    font-size: 18px;
+  }
+  .modal-footer {
+    justify-content: center;
+  }
+}
+
+/* iPad, Tablets */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .profile-wrapper-bg {
+    margin-top: 2rem;
+  }
+  .profile-wrapper-header {
+    padding: 20px 60px 0px 60px;
+  }
+  .profile-details-wrapper {
+    padding: 10px 0px 20px 0px;
+
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-details {
+    padding: 1rem 2rem 0rem 2rem;
+  }
+  .profile-details p {
+    font-size: 20px;
+    text-align: center;
+  }
+  .profile-details h1 {
+    text-align: center;
+    font-size: 40px;
+  }
+  .settings-wrapper {
+    grid-template-columns: 5fr 2fr;
+    font-size: 22px;
+    padding: 0px;
+  }
+  .profile-setting {
+    padding: 1rem 2rem;
+    height: 420px;
+    border-bottom-right-radius: 0 rem;
+    border-bottom-left-radius: 0 rem;
+  }
+  .setting-item1,
+  .setting-item3,
+  .setting-item5,
+  .privacy-item1,
+  .privacy-item2,
+  .privacy-item3,
+  .setting-item7 {
+    font-size: 22px;
+  }
+  .setting-item2,
+  .setting-item4 {
+    text-align: right;
+  }
+  .modal {
+    width: 350px;
+  }
+  .modal-header {
+    text-align: center;
+  }
+  .modal-body {
+    font-size: 18px;
+  }
+  .modal-footer {
+    justify-content: center;
+  }
+}
+
+/* Small screen, laptops */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .profile-wrapper-bg {
+    margin-top: 2rem;
+  }
+  .settings-wrapper {
+    grid-template-columns: 7fr 2fr;
+  }
+  .modal {
+    width: 420px;
+  }
+  .modal-header {
+    text-align: center;
+  }
+  .modal-body {
+    font-size: 18px;
+  }
+  .modal-footer {
+    justify-content: center;
+  }
+}
+
+/* Desktops, Large Screens ----------- */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  .profile-wrapper-bg {
+    margin-top: 2rem;
+  }
+  .settings-wrapper {
+    grid-template-columns: 8fr 2fr;
+  }
+  .modal {
+    width: 450px;
+  }
+  .modal-header {
+    text-align: center;
+  }
+  .modal-footer {
+    justify-content: end;
+  }
+}
+/* Large Screens, TV ----------- */
+@media only screen and (min-width: 1201px) {
+  .profile-wrapper-bg {
+    margin-top: 2rem;
+  }
+  .settings-wrapper {
+    grid-template-columns: 9fr 2fr;
+  }
+  .modal {
+    width: 500px;
+  }
+  .modal-header {
+    text-align: center;
+  }
+  .modal-footer {
+    justify-content: end;
+  }
 }
