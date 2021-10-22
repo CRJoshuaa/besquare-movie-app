@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router";
-import { Link, BrowserRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Header.css";
+import SearchBar from "../components/SearchBar";
 
 function Header() {
   const [show, handleShow] = useState(false);
@@ -28,6 +29,7 @@ function Header() {
           src="https://dubbsong.github.io/notflix/static/media/logo.854b40f2.png"
           alt=""
         />
+        {/* <SearchBar /> */}
 
         <Link to="/profile">
           <img

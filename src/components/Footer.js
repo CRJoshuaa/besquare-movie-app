@@ -19,7 +19,7 @@ function Footer(props) {
             <li className="social-icon__item">
               <a
                 className="social-icon__link"
-                href="https://www.youtube.com/"
+                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
                 target="_blank"
               >
                 <FontAwesomeIcon icon={faYoutube} size="2x" />
@@ -28,7 +28,7 @@ function Footer(props) {
             <li className="social-icon__item">
               <a
                 className="social-icon__link"
-                href="https://twitter.com/?lang=en"
+                href="https://twitter.com/coolbloxyt/status/1448650817951584264?s=20"
                 target="_blank"
               >
                 <FontAwesomeIcon icon={faTwitter} size="2x" />

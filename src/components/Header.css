@@ -1,5 +1,6 @@
 .nav {
-  display: flex;
+  display: grid;
+  grid-row: 3;
   align-items: center;
   position: fixed;
   top: 0;
@@ -16,16 +17,17 @@
 
 .nav_contents {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
 .nav_logo {
-  position: fixed;
+  /* position: fixed;
   top: 10px;
-  left: 0;
+  left: 0; */
   width: 200px;
-  object-fit: contain;
-  padding-left: 30px;
+  /* object-fit: contain;
+  padding-left: 30px; */
   cursor: pointer;
 }
 
@@ -36,7 +38,32 @@
 .nav_avatar {
   position: fixed;
   right: 20px;
-  width: 50px;
-  height: 50px;
+  top: 15px;
+  width: 70px;
+  height: auto;
   cursor: pointer;
+}
+
+/* mobile */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .nav_logo {
+    width: 70px;
+  }
+
+  .nav {
+    height: 70px;
+  }
+
+  .nav_avatar {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+/* Desktops, Large Screens ----------- */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+}
+
+/* Large Screens, TV ----------- */
+@media only screen and (min-width: 1201px) {
 }
