@@ -4,7 +4,6 @@
   object-fit: contain;
   margin: 0.5em;
 
-  border-radius: 0.2vw;
   width: auto;
   transition: transform 450ms;
 }
