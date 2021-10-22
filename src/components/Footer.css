@@ -85,6 +85,9 @@ footer {
 .social-icon__item:hover {
   transform: translateY(-10px);
 }
+.lastSocialIcon:hover {
+  transform: translateY(-10px);
+}
 a.social-icon__link {
   color: #ffffff;
 }
