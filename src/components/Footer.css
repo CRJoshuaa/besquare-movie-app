@@ -8,7 +8,7 @@ footer {
   padding: 20px;
   border-radius: 5px;
 
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 
   /* width: 100%;
   background: #3586ff;
@@ -79,6 +79,7 @@ footer {
   width: 97%;
   margin-top: 40px;
   quotes: "'" "'";
+  margin-bottom: 25px;
 }
 #copyright {
   color: #aaaaaa;
@@ -118,7 +119,8 @@ a.social-icon__link:hover {
   /* For mobile phones: */
   footer {
     /* width: 100vw;
-    height: 100vh; */
+    height: 100vh;  */
+    /* font-size: 4.5vw; */
   }
   #description {
     /* width: 97%;
