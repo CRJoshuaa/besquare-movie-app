@@ -1,4 +1,5 @@
 import React from "react";
+import "../App.css";
 import "./Footer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -42,7 +43,7 @@ function Footer(props) {
                 <FontAwesomeIcon icon={faInstagram} size="2x" />
               </a>
             </li>
-            <li className="social-icon__item">
+            <li className="lastSocialIcon">
               <a
                 className="social-icon__link"
                 href="https://www.facebook.com/"
